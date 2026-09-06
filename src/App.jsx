@@ -4,8 +4,8 @@ import {
   Route
 } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
 
+import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home";
 import Assessment from "./pages/Assessment";
 import Careers from "./pages/Careers";
