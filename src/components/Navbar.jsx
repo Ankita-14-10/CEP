@@ -22,10 +22,6 @@ function Navbar() {
           Careers
         </Link>
 
-        <Link to="/scholarships">
-          Scholarships
-        </Link>
-
         <Link to="/resources">
           Learning
         </Link>
