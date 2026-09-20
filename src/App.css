@@ -690,4 +690,14 @@ footer p {
     padding: 20px;
   }
 
+  .video-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.video-buttons .btn {
+  text-decoration: none;
+}
 }
