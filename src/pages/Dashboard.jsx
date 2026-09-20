@@ -124,13 +124,6 @@ function Dashboard() {
               Retake Assessment
             </Link>
 
-            <Link
-              to="/scholarships"
-              className="btn"
-            >
-              Find Scholarships
-            </Link>
-
           </div>
 
         </>
