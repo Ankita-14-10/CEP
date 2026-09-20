@@ -1,3 +1,4 @@
+```jsx
 import { useState } from "react";
 
 const resources = [
@@ -23,7 +24,12 @@ const resources = [
       "Learn CSS selectors and properties.",
       "Practice by creating a simple webpage."
     ],
-    resourceLink: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=HTML+CSS+for+beginners",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=HTML+CSS+for+beginners+Hindi",
+    resourceLink:
+      "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content"
   },
 
   {
@@ -49,7 +55,12 @@ const resources = [
       "Understand arrays and objects.",
       "Practice DOM manipulation."
     ],
-    resourceLink: "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=JavaScript+for+beginners",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=JavaScript+for+beginners+Hindi",
+    resourceLink:
+      "https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting"
   },
 
   {
@@ -75,7 +86,12 @@ const resources = [
       "Create functions.",
       "Practice lists and dictionaries."
     ],
-    resourceLink: "https://docs.python.org/3/tutorial/"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=Python+programming+for+beginners",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=Python+programming+for+beginners+Hindi",
+    resourceLink:
+      "https://docs.python.org/3/tutorial/"
   },
 
   {
@@ -101,7 +117,12 @@ const resources = [
       "Create simple charts.",
       "Organize and filter data."
     ],
-    resourceLink: "https://support.microsoft.com/en-us/excel"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=Microsoft+Excel+for+beginners",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=Microsoft+Excel+for+beginners+Hindi",
+    resourceLink:
+      "https://support.microsoft.com/en-us/excel"
   },
 
   {
@@ -127,7 +148,12 @@ const resources = [
       "Study user needs.",
       "Create simple webpage designs."
     ],
-    resourceLink: "https://www.figma.com/resource-library/"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=UI+UX+design+for+beginners",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=UI+UX+design+for+beginners+Hindi",
+    resourceLink:
+      "https://www.figma.com/resource-library/"
   },
 
   {
@@ -153,15 +179,23 @@ const resources = [
       "Practice interview questions.",
       "Improve confidence through regular practice."
     ],
-    resourceLink: "https://www.youtube.com/results?search_query=communication+skills+for+students"
+    englishVideo:
+      "https://www.youtube.com/results?search_query=communication+skills+for+students+English",
+    hindiVideo:
+      "https://www.youtube.com/results?search_query=communication+skills+for+students+Hindi",
+    resourceLink:
+      "https://www.youtube.com/results?search_query=communication+skills+for+students"
   }
 ];
 
 function Resources() {
+
   const [selectedResource, setSelectedResource] = useState(null);
 
   if (selectedResource) {
+
     return (
+
       <section className="page">
 
         <button
@@ -179,37 +213,88 @@ function Resources() {
           {selectedResource.description}
         </p>
 
+
         <div className="resource-card">
 
           <h2>📖 Learning Notes</h2>
 
           {selectedResource.notes.map((note, index) => (
+
             <p key={index}>
               <strong>{index + 1}.</strong> {note}
             </p>
+
           ))}
 
         </div>
 
-        <div className="resource-card" style={{ marginTop: "20px" }}>
+
+        <div
+          className="resource-card"
+          style={{ marginTop: "20px" }}
+        >
 
           <h2>⭐ Important Points</h2>
 
           {selectedResource.points.map((point, index) => (
+
             <p key={index}>
               ✅ {point}
             </p>
+
           ))}
 
         </div>
 
-        <div className="resource-card" style={{ marginTop: "20px" }}>
 
-          <h2>🎥 Continue Learning</h2>
+        <div
+          className="resource-card"
+          style={{ marginTop: "20px" }}
+        >
+
+          <h2>🎥 Video Learning</h2>
 
           <p>
-            Use the learning resource below to study this topic in more
-            detail.
+            Choose your preferred language and start learning.
+          </p>
+
+
+          <div className="video-buttons">
+
+            <a
+              href={selectedResource.englishVideo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              🇬🇧 English Video ↗
+            </a>
+
+
+            <a
+              href={selectedResource.hindiVideo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn"
+            >
+              🇮🇳 Hindi Video ↗
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div
+          className="resource-card"
+          style={{ marginTop: "20px" }}
+        >
+
+          <h2>📚 Continue Learning</h2>
+
+          <p>
+            Use the additional learning resource below to study
+            this topic in more detail.
           </p>
 
           <a
@@ -224,10 +309,13 @@ function Resources() {
         </div>
 
       </section>
+
     );
   }
 
+
   return (
+
     <section className="page">
 
       <h1>
@@ -235,9 +323,10 @@ function Resources() {
       </h1>
 
       <p className="page-description">
-        Learn valuable skills without depending entirely on expensive
-        coaching.
+        Learn valuable skills without depending entirely on
+        expensive coaching.
       </p>
+
 
       <div className="resource-grid">
 
@@ -260,6 +349,7 @@ function Resources() {
               {resource.description}
             </p>
 
+
             <div className="resource-meta">
 
               <span>
@@ -271,6 +361,7 @@ function Resources() {
               </span>
 
             </div>
+
 
             <button
               className="btn"
@@ -286,7 +377,9 @@ function Resources() {
       </div>
 
     </section>
+
   );
 }
 
 export default Resources;
+```
