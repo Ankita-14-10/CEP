@@ -1,9 +1,8 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route
 } from "react-router-dom";
-
 
 import Navbar from "./components/Navbar.jsx";
 import Home from "./pages/Home";
@@ -11,7 +10,6 @@ import Assessment from "./pages/Assessment";
 import Careers from "./pages/Careers";
 import CareerDetails from "./pages/CareerDetails";
 import Dashboard from "./pages/Dashboard";
-import Scholarships from "./pages/Scholarships";
 import Resources from "./pages/Resources";
 
 import "./App.css";
@@ -20,7 +18,7 @@ function App() {
 
   return (
 
-    <BrowserRouter>
+    <HashRouter>
 
       <Navbar />
 
@@ -54,11 +52,6 @@ function App() {
           />
 
           <Route
-            path="/scholarships"
-            element={<Scholarships />}
-          />
-
-          <Route
             path="/resources"
             element={<Resources />}
           />
@@ -84,7 +77,7 @@ function App() {
 
       </footer>
 
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
