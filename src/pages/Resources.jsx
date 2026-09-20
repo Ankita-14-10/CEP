@@ -1,4 +1,4 @@
-```jsx
+
 import { useState } from "react";
 
 const resources = [
@@ -291,4 +291,4 @@ function Resources() {
 }
 
 export default Resources;
-```
+
