@@ -195,7 +195,6 @@ function Resources() {
   if (selectedResource) {
 
     return (
-
       <section className="page">
 
         <button
@@ -213,21 +212,17 @@ function Resources() {
           {selectedResource.description}
         </p>
 
-
         <div className="resource-card">
 
           <h2>📖 Learning Notes</h2>
 
           {selectedResource.notes.map((note, index) => (
-
             <p key={index}>
               <strong>{index + 1}.</strong> {note}
             </p>
-
           ))}
 
         </div>
-
 
         <div
           className="resource-card"
@@ -237,15 +232,12 @@ function Resources() {
           <h2>⭐ Important Points</h2>
 
           {selectedResource.points.map((point, index) => (
-
             <p key={index}>
               ✅ {point}
             </p>
-
           ))}
 
         </div>
-
 
         <div
           className="resource-card"
@@ -258,7 +250,6 @@ function Resources() {
             Choose your preferred language and start learning.
           </p>
 
-
           <div className="video-buttons">
 
             <a
@@ -269,7 +260,6 @@ function Resources() {
             >
               🇬🇧 English Video ↗
             </a>
-
 
             <a
               href={selectedResource.hindiVideo}
@@ -283,7 +273,6 @@ function Resources() {
           </div>
 
         </div>
-
 
         <div
           className="resource-card"
@@ -309,13 +298,10 @@ function Resources() {
         </div>
 
       </section>
-
     );
   }
 
-
   return (
-
     <section className="page">
 
       <h1>
@@ -326,7 +312,6 @@ function Resources() {
         Learn valuable skills without depending entirely on
         expensive coaching.
       </p>
-
 
       <div className="resource-grid">
 
@@ -349,7 +334,6 @@ function Resources() {
               {resource.description}
             </p>
 
-
             <div className="resource-meta">
 
               <span>
@@ -361,7 +345,6 @@ function Resources() {
               </span>
 
             </div>
-
 
             <button
               className="btn"
@@ -377,7 +360,6 @@ function Resources() {
       </div>
 
     </section>
-
   );
 }
 
