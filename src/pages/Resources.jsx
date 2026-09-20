@@ -1,6 +1,6 @@
 ```jsx
 import { useState } from "react";
-
+function Resources() {
 const resources = [
   {
     title: "HTML & CSS Fundamentals",
